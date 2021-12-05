@@ -1,0 +1,60 @@
+{
+  "name": "MiSERY MUSiC",
+  "description": "An Open-Source Pyro Based Music Bot Written From Scratch.",
+  "keywords": ["MiSERY", "VoiceChat", "MusicBot"],
+  "logo": "https://te.legra.ph/file/b7d7910fc1ec434c92242.jpg",
+  "repository": "https://github.com/TeamDeeCode/DeCoDeMusic",
+  "stack": "container",
+  "env": {
+    "SESSION": {
+      "description": "Pyrogram-Session • Get it From https://replit.com/@TurdusMaximus/MiseryStringSession#main.py ",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Get it From @BotFather",
+      "required": true
+    },
+    "BOT_NAME": {
+      "description": "Music Player Name , Leave it as it is if you don't know about it.",
+      "required": false,
+      "value": ""
+    },
+    "API_ID": {
+      "description": "Get API Variables From @MiseryAPIBot",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Get it From https://dashboard.heroku.com/account",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Your Heroku App Name.",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get API Variables From @MiseryAPIBot",
+      "required": true
+    },
+    "SUDO": {
+      "description": "Users That Will Be Counted As Admin Everywhere. (Separted By Space).",
+      "required": true
+    },
+    "MAXIMUM_DURATION": {
+      "description": "Max audio duration limit for downloads (minutes).",
+      "required": true,
+      "value": "70"
+    },
+    "BOT_USERNAME": {
+      "description": "Username of Your MusicBot",
+      "required": true
+    },
+    "OWNERID": {
+      "description": "Your USERiD",
+      "required": true
+    },
+    "PLAYER_USERNAME": {
+      "description": "Username of Your Music Player/Assistant.",
+      "required": true
+    }     
+  }
+}
