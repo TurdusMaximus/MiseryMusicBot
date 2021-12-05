@@ -8,7 +8,7 @@ from Helpers.Decos import authorized_users_only
 from config import BOT_USERNAME, PLAYER_USERNAME
 
 ST = datetime.utcnow()
-ST_ISO = START_TIME.replace(microsecond=0).isoformat()
+ST_ISO = ST.replace(microsecond=0).isoformat()
 DURATION_UNITS = (
     ("week", 60 * 60 * 24 * 7),
     ("day", 60 ** 2 * 24),
