@@ -10,7 +10,7 @@ def check_heroku(func):
     @wraps(func)
     async def HEMROKU_CLi(client, message):
         heroku_app = None
-        if not HEmROKU_CLi:
+        if not HEMROKU_CLi:
             await message.reply_text(
                 "`•Add HEROKU_API_KEY First If You want To Run This!`",
                 parse_mode="markdown",
