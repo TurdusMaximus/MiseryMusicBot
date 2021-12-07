@@ -1,3 +1,4 @@
+#© @XeBorn Wholly Edited Basic Code.
 import os
 from os import path
 from typing import Callable
@@ -6,7 +7,7 @@ from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardM
 from pyrogram.errors import UserAlreadyParticipant
 from Client import callsmusic, queues
 from Client.callsmusic import client as USER
-from helpers.admins import get_administrators
+from Helpers.admeme import get_administrators
 import requests
 import aiohttp
 import yt_dlp
@@ -14,12 +15,12 @@ from youtube_search import YoutubeSearch
 import converter
 from youtube import youtube
 from config import MAXIMUM_DURATION, que, SUDO
-from cache.admins import admins as a
-from helpers.filters import command
-from helpers.decorators import errors, authorized_users_only
-from helpers.errors import DurationLimitError
-from helpers.gets import get_url, get_file_name
-from helpers.channelmusic import get_chat_id
+from xD.admins import admins as a
+from Helpers.Filters import command
+from Helpers.Decos import errors, authorized_users_only
+from Helpers.Errors import DurationLimitError
+from Plugs.Gets import get_url, get_file_name
+from Helpers.channelmusic import get_chat_id
 import aiofiles
 import ffmpeg
 from PIL import Image, ImageFont, ImageDraw
@@ -27,7 +28,7 @@ from pytgcalls import StreamType
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
 
-# plus
+# Also Bamby
 chat_id = None
 DISABLED_GROUPS = []
 useer = "NaN"
@@ -37,7 +38,7 @@ ACTV_CALLS = []
 def cb_admin_check(func: Callable) -> Callable:
     async def decorator(client, cb):
         admemes = a.get(cb.message.chat.id)
-        if cb.from_user.id in admemes or cb.from_user.id in SUDO_USERS:
+        if cb.from_user.id in admemes or cb.from_user.id in SUDO:
             return await func(client, cb)
         await cb.answer("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!", show_alert=True)
         return
