@@ -39,7 +39,7 @@ def cb_admin_check(func: Callable) -> Callable:
         admemes = a.get(cb.message.chat.id)
         if cb.from_user.id in admemes or cb.from_user.id in SUDO_USERS:
             return await func(client, cb)
-        await cb.answer("You ain't allowed!", show_alert=True)
+        await cb.answer("ʏᴏᴜ ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴅᴏ ᴛʜᴀᴛ!", show_alert=True)
         return
 
     return decorator
@@ -52,7 +52,7 @@ def transcode(filename):
     os.remove(filename)
 
 
-# Convert seconds to mm:ss
+# Converting seconds to mm:ss
 def convert_seconds(seconds):
     seconds = seconds % (24 * 3600)
     seconds %= 3600
@@ -61,7 +61,7 @@ def convert_seconds(seconds):
     return "%02d:%02d" % (minutes, seconds)
 
 
-# Convert hh:mm:ss to seconds
+# Converting hh:mm:ss to seconds.
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
@@ -258,8 +258,9 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="t.me/MISERYSUPPORT"),
                     InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇs", url="t.me/MISERYOFFICIAL"),
+                    InlineKeyboardButton("x-ᴠᴇʀsɪᴏɴs", url="t.me/MISERYHOMEBASE"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 ᴄʟᴏsᴇ", callback_data="cls")],
             ]
         )
 
