@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
 from Client import callsmusic, queues
-from Client.callsmusic import client as USER
+from Client.callsmusic import client as Peer
 from Helpers.admeme import get_administrators
 import requests
 import aiohttp
@@ -20,7 +20,7 @@ from Helpers.Filters import command
 from Helpers.Decos import errors, authorized_users_only
 from Helpers.Errors import DurationLimitError
 from Plugs.Gets import get_url, get_file_name
-from Helpers.channelmusic import get_chat_id
+from Helpers.ChannelMoosic import get_chat_id
 import aiofiles
 import ffmpeg
 from PIL import Image, ImageFont, ImageDraw
@@ -68,7 +68,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(":"))))
 
 
-# Change image size
+# Image Function (Old one)
 def changeImageSize(maxWidth, maxHeight, image):
     widthRatio = maxWidth / image.size[0]
     heightRatio = maxHeight / image.size[1]
@@ -92,25 +92,25 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image5 = image3.convert("RGBA")
     image6 = image4.convert("RGBA")
     Image.alpha_composite(image5, image6).save("temp.png")
-    img = Image.open("temp.png")
+    img = Image.open("XeFuck.png")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((190, 550), f"Title: {title}", (255, 255, 255), font=font)
-    draw.text((190, 590), f"Duration: {duration}", (255, 255, 255), font=font)
-    draw.text((190, 630), f"Views: {views}", (255, 255, 255), font=font)
+    font = ImageFont.truetype("Trash/MiseryJuly.otf", 32)
+    draw.text((200, 554), f"Somng: {title}", (269, 269, 269), font=font)
+    draw.text((200, 554), f"Length: {duration}", (269, 269, 269), font=font)
+    draw.text((200, 645), f"Views: {views}", (269, 269, 269), font=font)
     draw.text(
         (190, 670),
-        f"Added By: {requested_by}",
+        f"Fumcked By: {requested_by}",
         (255, 255, 255),
         font=font,
     )
-    img.save("final.png")
-    os.remove("temp.png")
-    os.remove("background.png")
+    img.save("Senkuu.png")
+    os.remove("XeFuck.png")
+    os.remove("MiseryBG.png")
 
 
 @Client.on_message(
-    command("Maintainmode") & ~filters.edited & ~filters.bot & ~filters.private
+    command("Geass") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @authorized_users_only
 async def hfmm(_, message):
@@ -121,12 +121,12 @@ async def hfmm(_, message):
         return
     if len(message.command) != 2:
         await message.reply_text(
-            "ɪ ᴏɴʟʏ ᴋɴᴏᴡ `/Maintainmode on` and `/Maintainmode off` "
+            "ɪ ᴏɴʟʏ ᴋɴᴏᴡ `/Geass ACT` and `/Geass DCT` "
         )
         return
     status = message.text.split(None, 1)[1]
     message.chat.id
-    if status in ["OFF", "Off", "off"]:
+    if status in ["DCT", "Dct", "dct" , "DcT"]:
         lel = await message.reply("`ᴘʀᴏᴄᴇssɪɴɢ...`")
         if message.chat.id not in DISABLED_GROUPS:
             await lel.edit("This Chat is not In maintainence mode")
@@ -136,11 +136,11 @@ async def hfmm(_, message):
             f"ᴍᴀɪɴᴛᴀɪɴᴀɴᴄᴇ ᴍᴏᴅᴇ ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ ɪɴ **{message.chat.title}**"
         )
 
-    elif status in ["ON", "On", "on"]:
-        lel = await message.reply("`Processing...`")
+    elif status in ["ACR", "Act", "act"]:
+        lel = await message.reply("`ᴘʀᴏᴄᴇssɪɴɢ ɪᴛ!`")
 
         if message.chat.id in DISABLED_GROUPS:
-            await lel.edit("maintainence mode  already active in This Chat")
+            await lel.edit("ᴍᴀɪɴᴛᴀɪɴᴇɴᴄᴇ ᴍᴏᴅᴇ ᴀʟʀᴇᴀᴅʏ ᴀᴄᴛɪᴠᴀᴛᴇᴅ!")
             return
         DISABLED_GROUPS.append(message.chat.id)
         await lel.edit(
@@ -148,7 +148,7 @@ async def hfmm(_, message):
         )
     else:
         await message.reply_text(
-            "ɪ ᴏɴʟʏ ᴋɴᴏᴡ `/Maintainmode on` and `/Maintainmode off` "
+            "ɪ ᴏɴʟʏ ᴋɴᴏᴡ `/Geass ACT` ~ `/Geass DCT` "
         )
 
 
@@ -167,7 +167,7 @@ async def m_cb(b, cb):
         await cb.message.delete()
 
 
-# play
+# Somg Play-Func - Emdited By © @XeBorn
 @Client.on_message(
     command("play")
     & filters.group
@@ -188,7 +188,7 @@ async def play(_, message: Message):
     chid = message.chat.id
 
     try:
-        user = await USER.get_me()
+        user = await Peer.get_me()
     except:
         user.first_name = "MiseryMusicPlayer"
     usar = user
@@ -210,8 +210,8 @@ async def play(_, message: Message):
                     return
 
                 try:
-                    await USER.join_chat(invitelink)
-                    await USER.send_message(
+                    await Peer.join_chat(invitelink)
+                    await Peer.send_message(
                         message.chat.id,
                         "✅ ᴍɪsᴇʀʏ ᴘʟᴀʏᴇʀ ʜᴇʀᴇ!",
                     )
@@ -226,11 +226,12 @@ async def play(_, message: Message):
                         f"ғʟᴏᴏᴅ-ᴡᴀɪᴛ ᴇʀʀᴏʀ \n •ʜᴏʟᴀ {user.first_name}, ᴍɪsᴇʀʏ ᴘʟᴀʏᴇʀ ᴄᴀɴɴᴏᴛ ᴊᴏɪɴ ʏᴏᴜʀ ᴄʜᴀᴛ!"
                     )
     try:
-        await USER.get_chat(chid)
+        await Peer.get_chat(chid)
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>Hey {user.first_name}, assistant userbot is not in this chat, ask admin to send /play command for first time to add it.</i>"
+            f"ᴄɪᴀᴏ! {user.first_name}, {PLAYER_USERNAME} ɪs ɴᴏᴛ ɪɴ ᴄʜᴀᴛ.\n\n •ᴀsᴋ ᴀɴʏ ᴀᴅᴍᴇᴍᴇ ᴛᴏ sᴇɴᴅ /play ᴄᴍᴅ ғᴏʀ ғɪʀsᴛ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ɪᴛ!
+"
         )
         return
 
@@ -379,7 +380,7 @@ async def play(_, message: Message):
     if int(chat_id) in ACTV_CALLS:
         position = await queues.put(chat_id, file=file_path)
         await message.reply_photo(
-            photo="final.png",
+            photo="Senkuu.png",
             caption="**•sᴏɴɢ:** {}\n**•ᴅᴜʀᴀᴛɪᴏɴ:** {} min\n**•ϙᴜᴇᴜᴇᴅ ʙʏ:** {}\n\n**•ϙᴜᴇᴜᴇᴅ ᴘᴏsɪᴛɪᴏɴ:** {}".format(
                 title,
                 duration,
@@ -399,12 +400,12 @@ async def play(_, message: Message):
                 stream_type=StreamType().local_stream,
             ) 
         await message.reply_photo(
-            photo="final.png",
+            photo="Senkuu.png",
             reply_markup=keyboard,
             caption="**•sᴏɴɢ:** {}\n**•ᴅᴜʀᴀᴛɪᴏɴ:** {} ᴍɪɴᴜᴛᴇs\n**•ϙᴜᴇᴜᴇᴅ ʙʏ:** {}\n\n**•ᴘʟᴀʏɪɴɢ ᴀᴛ `{}`**".format(
                 title, duration, message.from_user.mention(), message.chat.title
             ),
         )
 
-    os.remove("final.png")
+    os.remove("Senkuu.png")
     return await lel.delete()
