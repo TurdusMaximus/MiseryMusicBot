@@ -3,7 +3,7 @@ from os import path
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 from pytgcalls.types.input_stream import InputAudioStream
-from Misery import callsmusic, queues
+from Misery import callsmusic, Queues
 
 import converter
 from Youtube import youtube
