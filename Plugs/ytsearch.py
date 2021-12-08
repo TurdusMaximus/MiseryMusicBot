@@ -26,7 +26,11 @@ async def ytsearch(_, message: Message):
             [
                 InlineKeyboardButton(
                     "ᴄʟᴏsᴇ", callback_data="close",
+               
                 )
+                InlineKeyboardButton("ᴍɪsᴇʀʏ ᴏғғɪᴄɪᴀʟ" , url="T.me/MiSERYOFFiCiAL"
+
+)
             ]
         ]
     )
@@ -38,13 +42,13 @@ async def ytsearch(_, message: Message):
         query = message.text.split(None, 1)[1]
         m = await message.reply_text("sᴇᴀʀᴄʜɪɴɢ....")
         results = YoutubeSearch(query, max_results=5).to_dict()
-        text = ""
+        Moosic = ""
         for i in range(5):
-            text += f"Title - {results[i]['title']}\n"
-            text += f"Duration - {results[i]['duration']}\n"
-            text += f"Views - {results[i]['views']}\n"
-            text += f"Channel - {results[i]['channel']}\n"
-            text += f"https://youtube.com{results[i]['url_suffix']}\n\n"
-        await m.edit(text, disable_web_page_preview=True)
+            Moosic += f"•ᴛɪᴛʟᴇ - {results[i]['title']}\n"
+            Moosic += f"•ᴅᴜʀᴀᴛɪᴏɴ - {results[i]['duration']}\n"
+            Moosic += f"ᴠɪᴇᴡs - {results[i]['views']}\n"
+            Moosic += f"ᴄʜᴀɴɴᴇʟ - {results[i]['channel']}\n"
+            Moosic += f"https://youtube.com{results[i]['url_suffix']}\n\n"
+        await m.edit(Moosic, disable_web_page_preview=True)
     except Exception as e:
         await message.reply_text(str(e))
