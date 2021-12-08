@@ -8,7 +8,7 @@ from Client.callsmusic import client as Peer
 from config import SUDO
 
 
-@Client.on_message(filters.command(["userbotjoin", "join"]) & ~filters.private & ~filters.bot)
+@Client.on_message(filters.command(["playerjoin", "join"]) & ~filters.private & ~filters.bot)
 @authorized_users_only
 @errors
 async def addchannel(client, message):
@@ -30,7 +30,7 @@ async def addchannel(client, message):
         await Peer.join_chat(invitelink)
     except UserAlreadyParticipant:
         await message.reply_text(
-            f"{user.first_name} ᴍɪsᴇʀʏ ᴘʟᴀʏᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ʜᴇʀᴇ!</b>",
+            f"{user.first_name}  ɪs ᴀʟʀᴇᴀᴅʏ ʜᴇʀᴇ!</b>",
         )
     except Exception as e:
         print(e)
