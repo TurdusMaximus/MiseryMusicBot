@@ -1,8 +1,8 @@
-from plugins import check_heroku
-from helpers.filters import command
+from Plugins import check_heroku
+from Helpers.Filters import command
 from pyrogram import Client, filters
 from pyrogram import Client, filters
-from helpers.decorators import sudo_users_only
+from Helpers.Decos import sudo_users_only
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, Chat, CallbackQuery
 
 
