@@ -15,7 +15,7 @@ from youtube_search import YoutubeSearch
 import converter
 from youtube import youtube
 from config import MAXIMUM_DURATION, que, SUDO
-from xD.admins import admins as a
+from xD.admeme import admins as a
 from Helpers.Filters import command
 from Helpers.Decos import errors, authorized_users_only
 from Helpers.Errors import DurationLimitError
@@ -100,7 +100,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     draw.text((200, 645), f"Views: {views}", (269, 269, 269), font=font)
     draw.text(
         (190, 670),
-        f"Fumcked By: {requested_by}",
+        f"Req By: {requested_by}",
         (255, 255, 255),
         font=font,
     )
@@ -313,7 +313,7 @@ async def play(_, message: Message):
                 [[InlineKeyboardButton(text="YouTube 🎬", url="https://youtube.com")]]
             )
 
-        if (dur / 60) > DURATION_LIMIT:
+        if (dur / 60) > MAXIMUM_DURATION:
             await lel.edit(
                 f"❌ ɪ ᴄᴀɴɴᴏᴛ ᴘʟᴀʏ ᴛʜᴇ sᴏɴɢs ʟᴏɴɢᴇʀ ᴛʜᴀɴ {MAXIMUM_DURATION} ᴍɪɴᴜᴛᴇs!"
             )
@@ -367,7 +367,7 @@ async def play(_, message: Message):
             ]
         )
 
-        if (dur / 60) > DURATION_LIMIT:
+        if (dur / 60) > MAXIMUM_DURATION:
             await lel.edit(
                 f"❌ ᴠɪᴅᴇᴏs ʟᴏɴɢᴇʀ ᴛʜᴀɴ {MAXIMUM_DURATION} ᴍɪɴᴜᴛᴇs ᴀʀᴇ ɴᴏᴛ ᴀʟʟᴏᴡᴇᴅ ᴛᴏ ᴘʟᴀʏ!"
             )
