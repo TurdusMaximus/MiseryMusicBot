@@ -3,16 +3,16 @@ from os import path
 from pyrogram import Client
 from pyrogram.types import Message, Voice
 from pytgcalls.types.input_stream import InputAudioStream
-from Client import callsmusic, queues
+from Misery import callsmusic, queues
 
 import converter
-from youtube import youtube
+from Youtube import youtube
 
-from config import BOT_NAME as bn, DURATION_LIMIT, UPDATES_CHANNEL, AUD_IMG, QUE_IMG, GROUP_SUPPORT
-from helpers.filters import command, other_filters
-from helpers.decorators import errors
-from helpers.errors import DurationLimitError
-from helpers.gets import get_url, get_file_name
+from config import BOT_NAME as bn, MAXIMUM_DURATION, OFFICIAL_CHANNEL, AUDIO_PIC, QUEUE_PIC, SUPPORT
+from Helpers.Filters import command, other_filters
+from Helpers.Decos import errors
+from Helpers.Errors import DurationLimitError
+from Plugs.Gets import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 ACTV_CALLS = []
@@ -21,7 +21,7 @@ ACTV_CALLS = []
 @errors
 async def stream(_, message: Message):
     chat_id = message.chat.id
-if ["music", "Music" , "MUSIC"]:
+
 
     Xe = await message.reply("🔁 ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ᴍᴜsɪᴄ.")
     sender_id = message.from_user.id
