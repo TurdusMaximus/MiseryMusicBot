@@ -1,8 +1,8 @@
 from os import path
 
-from yt_dlp import YoutubeDL
+from yt_dlp import YoutubeDL as Yt
 
-from config import DURATION_LIMIT
+from config import MAXIMUM_DURATION
 from helpers.errors import DurationLimitError
 
 
@@ -12,17 +12,17 @@ ydl_opts = {
     "nocheckcertificate": True,
     "outtmpl": "downloads/%(id)s.%(ext)s",
 }
-ydl = YoutubeDL(ydl_opts)
+Xe = Yt(ydl_opts)
 
 
 def download(url: str) -> str:
-    info = ydl.extract_info(url, False)
+    info = Xe.extract_info(url, False)
     duration = round(info["duration"] / 60)
 
-    if duration > DURATION_LIMIT:
+    if duration > MAXIMUM_DURATION:
         raise DurationLimitError(
-            f"❌ Videos longer than {DURATION_LIMIT} minute(s) aren't allowed, the provided video is {duration} minute(s)"
+            f"❌ • ɪ ᴄᴀɴɴᴏᴛ ᴘʟᴀʏ ᴠɪᴅᴇᴏs ʟᴏɴɢᴇʀ ᴛʜᴀɴ {MAXIMUM_DURATION} ᴍɪɴᴜᴛᴇs, ᴘʀᴏᴠɪᴅᴇᴅ ᴠɪᴅᴇᴏ ɪs {duration} ᴍɪɴᴜᴛᴇs"
         )
 
-    ydl.download([url])
+    Xe.download([url])
     return path.join("downloads", f"{info['id']}.{info['ext']}")
