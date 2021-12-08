@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 from config import BOT_NAME as BON
-from helpers.filters import other_filters2
+from Helpers.Filters import other_filters2
 from time import time
 from datetime import datetime
 from Helpers.Decos import authorized_users_only
@@ -32,28 +32,26 @@ async def _human_time_duration(seconds):
 @Client.on_message(other_filters2)
 async def start(_, message: Message):
         await message.reply_text(
-        f"""**🍓Ciao! {BON} Here!**
-💌•I Am A Program Telegram Voice Chat Music Player. Developed and Maintained By [XeBorn](T.me/TurdusMaximus).
+        f"""**[🍓](https://telegra.ph/file/b2b2b734b7d7a0b11f58f.jpg)ᴄɪᴀᴏ! {BON} ʜᴇʀᴇ!**
+💌•ᴀ ᴘʀᴏɢᴇɴ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ [ʀᴇʙᴏʀɴᴇᴅ ᴠᴇʀsɪᴏɴ]. ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [xᴇʙᴏʀɴ](T.me/TurdusMaximus).
         """,
         reply_markup=InlineKeyboardMarkup(
             [
-                [   #Have To Fill Command Panel
+                [
+                  [
                     InlineKeyboardButton(
-                        "Command Panel", url="")
-                  ],[
-                    InlineKeyboardButton(
-                       "Support", url="https://t.me/MiserySupport"
+                       "sᴜᴘᴘᴏʀᴛ", url="https://t.me/MiserySupport"
                     ),
                     InlineKeyboardButton(
-                        "Updates", url="https://t.me/MiSERYOFFiCiAL"
+                        "ᴍɪsᴇʀʏ ᴏғғɪᴄɪᴀʟ", url="https://t.me/MiSERYOFFiCiAL"
                     )
                 ],[
                     InlineKeyboardButton(
-                        "Add Me In Your Group",
+                        "ᴀᴅᴅ ᴍɪsᴇʀʏ",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ]
             ]
         ),
-     disable_web_page_preview=True
+     disable_web_page_preview=False
     )
