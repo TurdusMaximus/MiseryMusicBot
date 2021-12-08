@@ -1,8 +1,8 @@
-from typing import Dict
-from asyncio import Queue, QueueEmpty as Empty
+from typing import Dict as Xe
+from asyncio import Queue, QueueEmpty as Senkuu
 
 
-queues: Dict[int, Queue] = {}
+queues: Xe[int, Queue] = {}
 
 
 async def put(chat_id: int, **kwargs) -> int:
@@ -12,11 +12,11 @@ async def put(chat_id: int, **kwargs) -> int:
     return queues[chat_id].qsize()
 
 
-def get(chat_id: int) -> Dict[str, str]:
+def get(chat_id: int) -> Xe[str, str]:
     if chat_id in queues:
         try:
             return queues[chat_id].get_nowait()
-        except Empty:
+        except Senkuu:
             return None
 
 
@@ -37,7 +37,7 @@ def task_done(chat_id: int):
 def clear(chat_id: int):
     if chat_id in queues:
         if queues[chat_id].empty():
-            raise Empty
+            raise Senkuu
         else:
             queues[chat_id].queue = []
     raise Empty
