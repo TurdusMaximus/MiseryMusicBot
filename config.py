@@ -12,7 +12,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 PLAYER_USERNAME = getenv("PLAYER_USERNAME")
 OFFICIAL_CHANNEL = getenv("OFFICIAL_CHANNEL", "MiSERYOFFiCiAL")
-SUPPORT = getenv("GROUP_SUPPORT", "MiserySupport")
+SUPPORT = getenv("SUPPORT", "MiserySupport")
 BOT_USERNAME = getenv("BOT_USERNAME")
 PLAYING_PIC = getenv("PLAYING_PIC", "https://telegra.ph/file/57e3495d7c0307018b640.png")
 THUMBNAIL_PIC = getenv("THUMBNAIL_PIC", "https://telegra.ph/file/edfa46623756f59a7c531.png")
@@ -24,9 +24,9 @@ admemes = {}
 API_ID = int(getenv("API_ID"))
 API_HASH = getenv("API_HASH")
 
-OWNERID = int(getenv("OWNER_ID"))
+OWNERID = int(getenv("OWNERID"))
 
-MAXIMUM_DURATION = int(getenv("DURATION_LIMIT", "70"))
+MAXIMUM_DURATION = int(getenv("MAXIMUM_DURATION", "69"))
 
 COMMAND_PANEL = list(getenv("COMMAND_PANEL", "/ !").split())
 
