@@ -5,8 +5,9 @@ from typing import Callable
 from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
-from Client import callsmusic, queues
-from Client.callsmusic import client as Peer
+from Misery import callsmusic 
+from Beta import Queues
+from Misery.callsmusic import client as Peer
 from Helpers.admeme import get_administrators
 import requests
 import aiohttp
