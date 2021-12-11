@@ -2,8 +2,8 @@ import requests
 from pytgcalls import idle
 from pyrogram import Client as Misery
 
-from Client.callsmusic import run
-from config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
+from Misery.callsmusic import run
+from config import API_ID, API_HASH, BOT_TOKEN, PLAYING_PIC
 
 response = requests.get(PLAYING_PIC)
 with open("./Trash/MiseryXnXX.png", "wb") as f:
