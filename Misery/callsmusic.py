@@ -6,7 +6,7 @@ from pytgcalls.types.input_stream import InputAudioStream
 
 from config import API_HASH, API_ID, SESSION
 
-from . import queues
+from . import Queues
 
 client = Client(SESSION, API_ID, API_HASH)
 pytgcalls = PyTgCalls(client)
