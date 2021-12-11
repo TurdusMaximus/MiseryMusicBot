@@ -1,2 +1,2 @@
 from .callsmusic import pytgcalls, run
-from .Beta import Queues
+from Beta import Queues
