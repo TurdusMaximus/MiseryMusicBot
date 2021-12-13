@@ -11,7 +11,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 from config import SUDO
-from Client.callsmusic import client as Peer
+from Misery.callsmusic import client as Peer
 
 @Client.on_message(filters.command(["GeassCast"]))
 async def broadcast(_, message: Message):
