@@ -3,9 +3,9 @@ from pytgcalls import idle
 from pyrogram import Client as Bot
 
 from Misery.callsmusic import run
-from config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
+from config import API_ID, API_HASH, BOT_TOKEN, PLAYING_PIC
 
-response = requests.get(BG_IMAGE)
+response = requests.get(PLAYING_PIC)
 with open("./Trash/MiseryXnXX.png", "wb") as file:
     file.write(response.content)
 
