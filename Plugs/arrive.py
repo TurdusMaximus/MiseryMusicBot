@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import UserAlreadyParticipant
 import asyncio
 from Helpers.Decos import authorized_users_only, errors
-from Client.callsmusic import client as Peer
+from Misery.callsmusic import client as Peer
 from config import SUDO
 
 
