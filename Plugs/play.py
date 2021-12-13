@@ -5,8 +5,8 @@ from typing import Callable
 from pyrogram import Client, filters
 from pyrogram.types import Message, Voice, InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserAlreadyParticipant
-from Misery import callsmusic 
-from Beta import Queues
+from Misery import callsmusic , queues
+
 from Misery.callsmusic import client as Peer
 from Helpers.admeme import get_administrators
 import requests
@@ -14,7 +14,7 @@ import aiohttp
 import yt_dlp
 from youtube_search import YoutubeSearch
 import converter
-from youtube import youtube
+from Youtube import youtube
 from config import MAXIMUM_DURATION, que, SUDO
 from xD.admeme import admins as a
 from Helpers.Filters import command
