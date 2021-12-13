@@ -1,2 +1,4 @@
+# ©XeBorn 2022
+#Misery
 from .callsmusic import pytgcalls, run
-from Misery.Beta import Queues
+from . import queues
