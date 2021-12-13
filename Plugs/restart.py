@@ -1,4 +1,4 @@
-from Plugins import check_heroku
+from Plugs import check_heroku
 from Helpers.Filters import command
 from pyrogram import Client, filters
 from pyrogram import Client, filters
