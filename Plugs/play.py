@@ -20,7 +20,7 @@ from xD.admeme import admins as a
 from Helpers.Filters import command
 from Helpers.Decos import errors, authorized_users_only
 from Helpers.Errors import DurationLimitError
-from Plugs.Gets import get_url, get_file_name
+from Plugs.Get import get_url, get_file_name
 from Helpers.ChannelMoosic import get_chat_id
 import aiofiles
 import ffmpeg
