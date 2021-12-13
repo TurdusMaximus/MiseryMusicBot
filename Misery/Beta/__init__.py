@@ -1,4 +1,4 @@
-from .Queues import (
+from Beta.Queues import (
 clear,
 get,
 is_empty,
