@@ -231,9 +231,9 @@ async def play(_, message: Message):
         # lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"ᴄɪᴀᴏ! {user.first_name}, {PLAYER_USERNAME} ɪs ɴᴏᴛ ɪɴ ᴄʜᴀᴛ.\n\n •ᴀsᴋ ᴀɴʏ ᴀᴅᴍᴇᴍᴇ ᴛᴏ sᴇɴᴅ /play ᴄᴍᴅ ғᴏʀ ғɪʀsᴛ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ɪᴛ!
-"
-        )
+            f"ᴄɪᴀᴏ! {user.first_name}, {PLAYER_USERNAME} ɪs ɴᴏᴛ ɪɴ ᴄʜᴀᴛ.\n\n •ᴀsᴋ ᴀɴʏ ᴀᴅᴍᴇᴍᴇ ᴛᴏ sᴇɴᴅ /play ᴄᴍᴅ ғᴏʀ ғɪʀsᴛ ᴛɪᴍᴇ ᴛᴏ ᴀᴅᴅ ɪᴛ!"
+                    )
+        
         return
 
     audio = (
