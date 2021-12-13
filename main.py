@@ -2,11 +2,11 @@ import requests
 from pytgcalls import idle
 from pyrogram import Client as Bot
 
-from Client.callsmusic import run
+from Misery.callsmusic import run
 from config import API_ID, API_HASH, BOT_TOKEN, BG_IMAGE
 
 response = requests.get(BG_IMAGE)
-with open("./etc/foreground.png", "wb") as file:
+with open("./Trash/MiseryXnXX.png", "wb") as file:
     file.write(response.content)
 
 
@@ -15,7 +15,7 @@ bot = Bot(
     API_ID,
     API_HASH,
     bot_token=BOT_TOKEN,
-    plugins=dict(root="plugins")
+    plugins=dict(root="Plugs")
 )
 
 bot.start()
