@@ -3,7 +3,7 @@ from os import path
 from yt_dlp import YoutubeDL
 
 from config import MAXIMUM_DURATION
-from helpers.errors import DurationLimitError
+from Helpers.Errors import DurationLimitError
 
 
 ydl_opts = {
