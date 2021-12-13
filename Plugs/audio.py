@@ -23,7 +23,7 @@ async def stream(_, message: Message):
     chat_id = message.chat.id
 
 
-    Xe = await message.reply("🔁 ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ᴍᴜsɪᴄ.")
+    Xe = await message.reply("🔁 ᴘʀᴏᴄᴇssɪɴɢ ʏᴏᴜʀ ᴍᴜsɪᴄ...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
