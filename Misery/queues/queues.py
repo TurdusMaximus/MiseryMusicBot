@@ -1,5 +1,5 @@
 from typing import Dict
-from asyncio import Queue, QueueEmpty as Empty
+from asyncio import Queue, QueueEmpty as Xe
 
 
 queues: Dict[int, Queue] = {}
@@ -16,7 +16,7 @@ def get(chat_id: int) -> Dict[str, str]:
     if chat_id in queues:
         try:
             return queues[chat_id].get_nowait()
-        except Empty:
+        except Xe:
             return None
 
 
@@ -37,7 +37,7 @@ def task_done(chat_id: int):
 def clear(chat_id: int):
     if chat_id in queues:
         if queues[chat_id].empty():
-            raise Empty
+            raise Xe
         else:
             queues[chat_id].queue = []
-    raise Empty
+    raise Xe
