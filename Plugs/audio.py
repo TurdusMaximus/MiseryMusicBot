@@ -12,7 +12,7 @@ from config import BOT_NAME as bn, MAXIMUM_DURATION, OFFICIAL_CHANNEL, AUDIO_PIC
 from Helpers.Filters import command, other_filters
 from Helpers.Decos import errors
 from Helpers.Errors import DurationLimitError
-from Plugs.Gets import get_url, get_file_name
+from Plugs.Get import get_url, get_file_name
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 ACTV_CALLS = []
