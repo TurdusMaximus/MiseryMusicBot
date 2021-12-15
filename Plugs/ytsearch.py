@@ -28,7 +28,8 @@ async def ytsearch(_, message: Message):
                     "ᴄʟᴏsᴇ", callback_data="close",
                
                 )
-                InlineKeyboardButton("ᴍɪsᴇʀʏ ᴏғғɪᴄɪᴀʟ" , url="T.me/MiSERYOFFiCiAL"
+                InlineKeyboardButton(
+                    "ᴍɪsᴇʀʏ ᴏғғɪᴄɪᴀʟ" , url="T.me/MiSERYOFFiCiAL",
 
                 )
             ]
