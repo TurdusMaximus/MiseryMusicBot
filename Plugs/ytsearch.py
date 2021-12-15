@@ -30,7 +30,7 @@ async def ytsearch(_, message: Message):
                 )
                 InlineKeyboardButton("ᴍɪsᴇʀʏ ᴏғғɪᴄɪᴀʟ" , url="T.me/MiSERYOFFiCiAL"
 
-)
+                )
             ]
         ]
     )
