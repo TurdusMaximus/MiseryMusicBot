@@ -36,7 +36,7 @@ async def start(_, message: Message):
 💌•ᴀ ᴘʀᴏɢᴇɴ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ [ʀᴇʙᴏʀɴᴇᴅ ᴠᴇʀsɪᴏɴ]. ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [xᴇʙᴏʀɴ](T.me/TurdusMaximus).
         """,
         reply_markup=InlineKeyboardMarkup(
-            [
+            
                 [
                   [
                     InlineKeyboardButton(
