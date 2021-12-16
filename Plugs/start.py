@@ -33,7 +33,7 @@ async def _human_time_duration(seconds):
 async def start(_, message: Message):
         await message.reply_text(
         f"""**[🍓](https://telegra.ph/file/b2b2b734b7d7a0b11f58f.jpg)ᴄɪᴀᴏ! {BON} ʜᴇʀᴇ!**
-💌•ᴀ ᴘʀᴏɢᴇɴ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ [ʀᴇʙᴏʀɴᴇᴅ ᴠᴇʀsɪᴏɴ]. ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [xᴇʙᴏʀɴ](T.me/TurdusMaximus).
+💌•ᴀ ᴘʀᴏɢᴇɴ ᴍᴜsɪᴄ ᴘʟᴀʏᴇʀ ғᴏʀ ᴘʀᴏɢᴇɴ ᴄʜᴀᴛs. \n•🍡ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ [xᴇʙᴏʀɴ](T.me/TurdusMaximus).
         """,
         reply_markup=InlineKeyboardMarkup(
             
