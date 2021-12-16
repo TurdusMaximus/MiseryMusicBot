@@ -92,7 +92,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     image4 = changeImageSize(1280, 720, image2)
     image5 = image3.convert("RGBA")
     image6 = image4.convert("RGBA")
-    Image.alpha_composite(image5, image6).save("temp.png")
+    Image.alpha_composite(image5, image6).save("XeFuck.png")
     img = Image.open("XeFuck.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("Trash/MiseryJuly.otf", 32)
