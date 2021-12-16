@@ -82,7 +82,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     async with aiohttp.ClientSession() as session:
         async with session.get(thumbnail) as resp:
             if resp.status == 200:
-                f = await aiofiles.open("background.png", mode="wb")
+                f = await aiofiles.open("MiSERYBG.png", mode="wb")
                 await f.write(await resp.read())
                 await f.close()
 
