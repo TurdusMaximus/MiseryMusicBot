@@ -23,16 +23,17 @@ async def ytsearch(_, message: Message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [
+            
                 InlineKeyboardButton(
                     "ᴄʟᴏsᴇ", callback_data="close",
                
-                )
+                ),
+
                 InlineKeyboardButton(
                     "ᴍɪsᴇʀʏ ᴏғғɪᴄɪᴀʟ" , url="T.me/MiSERYOFFiCiAL",
 
-                )
-            ]
+                ),
+            
         ]
     )
     
