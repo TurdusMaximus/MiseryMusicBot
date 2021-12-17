@@ -96,13 +96,13 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("XeFuck.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("Trash/MiseryJuly.otf", 32)
-    draw.text((200, 550), f"Song:     {title}", (400, 400, 400), font=font)
-    draw.text((200, 550), f"Length:   {duration}", (400, 400, 400), font=font)
-    draw.text((200, 550), f"Views:    {views}", (400, 400, 400), font=font)
+    draw.text((500, 400), f"Song: {title}", (400, 400, 400), font=font)
+    draw.text((500, 400), f"Length: {duration}", (400, 400, 400), font=font)
+    draw.text((500, 400), f"Views: {views}", (400, 400, 400), font=font)
     draw.text(
-        (190, 670),
+        (190, 400),
         f"Req By: {requested_by}",
-        (255, 255, 255),
+        (400, 400, 400),
         font=font,
     )
     img.save("Senkuu.png")
