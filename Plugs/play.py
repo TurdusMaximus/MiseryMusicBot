@@ -96,9 +96,9 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("XeFuck.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("Trash/MiseryJuly.otf", 32)
-    draw.text((200, 554), f"Somng: {title}", (269, 269, 269), font=font)
-    draw.text((200, 554), f"Length: {duration}", (269, 269, 269), font=font)
-    draw.text((200, 645), f"Views: {views}", (269, 269, 269), font=font)
+    draw.text((200, 550), f"Song:     {title}", (400, 400, 400), font=font)
+    draw.text((200, 550), f"Length:   {duration}", (400, 400, 400), font=font)
+    draw.text((200, 550), f"Views:    {views}", (400, 400, 400), font=font)
     draw.text(
         (190, 670),
         f"Req By: {requested_by}",
