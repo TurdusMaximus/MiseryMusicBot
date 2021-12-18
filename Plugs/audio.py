@@ -35,7 +35,7 @@ async def stream(_, message: Message):
                         url=f"https://t.me/MISERYSupport"),
                     InlineKeyboardButton(
                         text="ᴏғғɪᴄɪᴀʟ",
-                        url=f"https://t.me/{UPDATES_CHANNEL}"),
+                        url=f"https://t.me/{OFFICIAL_CHANNEL}"),
                     
                 InlineKeyboardButton(
                         text="x-ᴠᴇʀsɪᴏɴs",
